@@ -1,0 +1,15 @@
+version: '2'
+services:
+    punic-app:
+        image: punic
+        external_links:
+            - punic-postgresql:postgresql
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/punic
+        ports:
+            - 8080:8080
+    punic-postgresql:
+        extends:
+            file: postgresql.yml
+            service: punic-postgresql
