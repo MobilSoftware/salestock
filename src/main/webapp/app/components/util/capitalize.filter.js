@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .filter('capitalize', capitalize);
 
     function capitalize() {

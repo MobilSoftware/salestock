@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .factory('translationHandler', translationHandler);
 
     translationHandler.$inject = ['$rootScope', '$window', '$state', '$translate'];

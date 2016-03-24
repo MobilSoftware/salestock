@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .factory('Principal', Principal);
 
     Principal.$inject = ['$q', 'Account'];

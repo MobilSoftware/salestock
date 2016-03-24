@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .directive('activeMenu', activeMenu);
 
     function activeMenu($translate, $locale, tmhDynamicLocale) {

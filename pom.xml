@@ -9,11 +9,11 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.mascova.punic</groupId>
-    <artifactId>punic</artifactId>
+    <groupId>com.mascova.talarion</groupId>
+    <artifactId>talarion3</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>punic</name>
+    <name>talarion3</name>
 
     <repositories>
         <repository>
@@ -543,11 +543,11 @@
                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                     <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:postgresql://localhost:5432/punic</url>
+                    <url>jdbc:postgresql://localhost:5432/talarion3</url>
                     <defaultSchemaName></defaultSchemaName>
-                    <username>punic</username>
-                    <password></password>
-                    <referenceUrl>hibernate:spring:com.mascova.punic.domain?dialect=org.hibernate.dialect.PostgreSQL82Dialect&amp;hibernate.ejb.naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy</referenceUrl>
+                    <username>talarion</username>
+                    <password>talarion</password>
+                    <referenceUrl>hibernate:spring:com.mascova.talarion.domain?dialect=org.hibernate.dialect.PostgreSQL82Dialect&amp;hibernate.ejb.naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy</referenceUrl>
                     <verbose>true</verbose>
                     <logging>debug</logging>
                 </configuration>
@@ -588,7 +588,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.1</version>
                 <configuration>
-                    <imageName>punic</imageName>
+                    <imageName>talarion3</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
                         <resource>

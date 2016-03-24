@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('punicApp')
+    angular.module('talarionApp')
         .controller('HealthModalController', HealthModalController);
 
     HealthModalController.$inject = ['$uibModalInstance', 'currentHealth', 'baseName', 'subSystemName'];

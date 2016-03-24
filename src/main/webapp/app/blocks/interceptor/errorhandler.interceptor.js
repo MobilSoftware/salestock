@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .factory('errorHandlerInterceptor', errorHandlerInterceptor);
 
     errorHandlerInterceptor.$inject = ['$q', '$rootScope'];
@@ -16,7 +16,7 @@
 
         function responseError (response) {
             if (!(response.status === 401 && (response.data === '' || response.data.path.indexOf('/api/account') === 0 ))) {
-                $rootScope.$emit('punicApp.httpError', response);
+                $rootScope.$emit('talarionApp.httpError', response);
             }
             return $q.reject(response);
         }

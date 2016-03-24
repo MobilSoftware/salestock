@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .directive('jhSortBy', jhSortBy);
 
     function jhSortBy() {

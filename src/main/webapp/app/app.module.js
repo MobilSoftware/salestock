@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp', [
+        .module('talarionApp', [
             'ngStorage', 
             'tmh.dynamicLocale',
             'pascalprecht.translate', 

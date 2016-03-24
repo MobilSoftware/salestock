@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .factory('Base64', Base64);
 
     function Base64 () {

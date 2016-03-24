@@ -1,15 +1,15 @@
 version: '2'
 services:
-    punic-app:
-        image: punic
+    talarion-app:
+        image: talarion
         external_links:
-            - punic-postgresql:postgresql
+            - talarion-postgresql:postgresql
         environment:
             - SPRING_PROFILES_ACTIVE=prod
-            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/punic
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/talarion
         ports:
             - 8080:8080
-    punic-postgresql:
+    talarion-postgresql:
         extends:
             file: postgresql.yml
-            service: punic-postgresql
+            service: talarion-postgresql

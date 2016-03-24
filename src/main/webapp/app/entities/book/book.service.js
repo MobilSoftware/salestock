@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .factory('Book', Book);
 
     Book.$inject = ['$resource', 'DateUtils'];

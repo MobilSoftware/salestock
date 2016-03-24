@@ -153,7 +153,7 @@ gulp.task('html', function () {
     return gulp.src(config.app + 'app/**/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(templateCache({
-            module: 'punicApp',
+            module: 'talarionApp',
             root: 'app/',
             moduleSystem: 'IIFE'
         }))
@@ -163,7 +163,7 @@ gulp.task('html', function () {
 gulp.task('ngconstant:dev', function () {
     return ngConstant({
         dest: 'app.constants.js',
-        name: 'punicApp',
+        name: 'talarionApp',
         deps: false,
         noFile: true,
         interpolate: /\{%=(.+?)%\}/g,
@@ -184,7 +184,7 @@ gulp.task('ngconstant:dev', function () {
 gulp.task('ngconstant:prod', function () {
     return ngConstant({
         dest: 'app.constants.js',
-        name: 'punicApp',
+        name: 'talarionApp',
         deps: false,
         noFile: true,
         interpolate: /\{%=(.+?)%\}/g,

@@ -11,7 +11,7 @@
     };
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .component('jhiAlert', jhiAlert);
 
     jhiAlertController.$inject = ['$scope', 'AlertService'];

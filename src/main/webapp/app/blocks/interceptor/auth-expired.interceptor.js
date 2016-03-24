@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .factory('authExpiredInterceptor', authExpiredInterceptor);
 
     

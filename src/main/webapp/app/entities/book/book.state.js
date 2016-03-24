@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider'];
@@ -14,7 +14,7 @@
             url: '/book?page&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'punicApp.book.home.title'
+                pageTitle: 'talarionApp.book.home.title'
             },
             views: {
                 'content@': {
@@ -56,7 +56,7 @@
             url: '/book/{id}',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'punicApp.book.detail.title'
+                pageTitle: 'talarionApp.book.detail.title'
             },
             views: {
                 'content@': {

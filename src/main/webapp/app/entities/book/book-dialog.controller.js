@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .controller('BookDialogController', BookDialogController);
 
     BookDialogController.$inject = ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Book', 'Author'];
@@ -18,7 +18,7 @@
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('punicApp:bookUpdate', result);
+            $scope.$emit('talarionApp:bookUpdate', result);
             $uibModalInstance.close(result);
             vm.isSaving = false;
         };

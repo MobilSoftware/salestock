@@ -1,4 +1,4 @@
-# punic
+# talarion
 
 This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).
 
@@ -31,7 +31,7 @@ Add the `-h` flag on any command to see how you can use it. For example, `bower 
 
 ## Building for production
 
-To optimize the punic client for production, run:
+To optimize the talarion client for production, run:
 
     ./mvnw -Pprod clean package
 
@@ -56,9 +56,9 @@ Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in
 
 To setup this project in Jenkins, use the following configuration:
 
-* Project name: `punic`
+* Project name: `talarion`
 * Source Code Management
-    * Git Repository: `git@github.com:xxxx/punic.git`
+    * Git Repository: `git@github.com:xxxx/talarion.git`
     * Branches to build: `*/master`
     * Additional Behaviours: `Wipe out repository & force clone`
 * Build Triggers

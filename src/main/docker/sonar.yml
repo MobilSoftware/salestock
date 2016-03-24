@@ -1,7 +1,7 @@
 version: '2'
 services:
-    punic-sonar:
-        container_name: punic-sonar
+    talarion-sonar:
+        container_name: talarion-sonar
         image: sonarqube:5.3
         ports:
             - 9000:9000

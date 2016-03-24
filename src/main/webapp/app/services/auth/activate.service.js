@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .factory('Activate', Activate);
 
     Activate.$inject = ['$resource'];

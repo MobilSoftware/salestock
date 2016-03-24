@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .controller('AuthorDetailController', AuthorDetailController);
 
     AuthorDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Author', 'Book'];
@@ -15,7 +15,7 @@
                 vm.author = result;
             });
         };
-        var unsubscribe = $rootScope.$on('punicApp:authorUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('talarionApp:authorUpdate', function(event, result) {
             vm.author = result;
         });
         $scope.$on('$destroy', unsubscribe);

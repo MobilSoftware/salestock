@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .controller('BookDeleteController',BookDeleteController);
 
     BookDeleteController.$inject = ['$uibModalInstance', 'entity', 'Book'];

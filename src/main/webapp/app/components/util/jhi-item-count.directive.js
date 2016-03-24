@@ -14,6 +14,6 @@
     };
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .component('jhiItemCount', jhiItemCount);
 })();

@@ -1,12 +1,12 @@
 <div>
-    <h2 translate="punicApp.book.home.title">Books</h2>
+    <h2 translate="talarionApp.book.home.title">Books</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-4 no-padding-left">
                 <button class="btn btn-primary" ui-sref="book.new" >
                     <span class="glyphicon glyphicon-plus"></span>
-                    <span  translate="punicApp.book.home.createLabel">
+                    <span  translate="talarionApp.book.home.createLabel">
                         Create new Book
                     </span>
                 </button>
@@ -19,11 +19,11 @@
             <thead>
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
                     <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="title"><span translate="punicApp.book.title">Title</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="description"><span translate="punicApp.book.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="publicationDate"><span translate="punicApp.book.publicationDate">PublicationDate</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="price"><span translate="punicApp.book.price">Price</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="author.name"><span translate="punicApp.book.author">author</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="title"><span translate="talarionApp.book.title">Title</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span translate="talarionApp.book.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="publicationDate"><span translate="talarionApp.book.publicationDate">PublicationDate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="price"><span translate="talarionApp.book.price">Price</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="author.name"><span translate="talarionApp.book.author">author</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>

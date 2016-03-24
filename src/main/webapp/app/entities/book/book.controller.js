@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .controller('BookController', BookController);
 
     BookController.$inject = ['$scope', '$state', 'Book', 'ParseLinks', 'AlertService', 'pagingParams', 'paginationConstants'];

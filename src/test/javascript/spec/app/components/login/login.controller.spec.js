@@ -2,7 +2,7 @@
 
 describe('Controller Tests', function () {
 
-    beforeEach(module('punicApp'));
+    beforeEach(module('talarionApp'));
 
     describe('LoginController', function () {
         var $scope, authService;

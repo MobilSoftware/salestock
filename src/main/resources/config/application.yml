@@ -14,7 +14,7 @@
 
 spring:
     application:
-        name: punic
+        name: talarion
     jpa:
         open-in-view: false
         hibernate:
@@ -49,14 +49,14 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
-        from: punic@localhost
+        from: talarion@localhost
     security:
         rememberMe:
             # security key (this key should be unique for your application, and kept secret)
             key: 147cb122c10321fca185226a984351965fc0b9fd
     swagger:
-        title: punic API
-        description: punic API documentation
+        title: talarion API
+        description: talarion API documentation
         version: 0.0.1
         termsOfServiceUrl:
         contactName:

@@ -18,12 +18,12 @@ spring:
         livereload:
             enabled: false
     datasource:
-        url: jdbc:postgresql://localhost:5432/punic-3.0.0
+        url: jdbc:postgresql://localhost:5432/talarion
         name:
-        username: punic
-        password: punic
+        username: talarion
+        password: talarion
     jpa:
-        database-platform: com.mascova.punic.domain.util.FixedPostgreSQL82Dialect
+        database-platform: com.mascova.talarion.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL
         show_sql: false
         properties:
@@ -56,7 +56,7 @@ jhipster:
         cache: # Used by the CachingHttpHeadersFilter
             timeToLiveInDays: 1461
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: punic@localhost
+        from: talarion@localhost
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
         spark:
@@ -67,7 +67,7 @@ jhipster:
             enabled: false
             host: localhost
             port: 2003
-            prefix: punic
+            prefix: talarion
         logs: # report metrics in the logs
             enabled: false
             reportFrequency: 60 # in seconds

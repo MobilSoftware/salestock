@@ -1,29 +1,29 @@
 
 <div>
-    <h2><span translate="punicApp.book.detail.title">Book</span> {{vm.book.id}}</h2>
+    <h2><span translate="talarionApp.book.detail.title">Book</span> {{vm.book.id}}</h2>
     <hr>
     <dl class="dl-horizontal">
-        <dt><span translate="punicApp.book.title">Title</dt></dt>
+        <dt><span translate="talarionApp.book.title">Title</dt></dt>
         <dd>
             <span>{{vm.book.title}}<span>
         </dd>
         <hr>
-        <dt><span translate="punicApp.book.description">Description</dt></dt>
+        <dt><span translate="talarionApp.book.description">Description</dt></dt>
         <dd>
             <span>{{vm.book.description}}<span>
         </dd>
         <hr>
-        <dt><span translate="punicApp.book.publicationDate">PublicationDate</dt></dt>
+        <dt><span translate="talarionApp.book.publicationDate">PublicationDate</dt></dt>
         <dd>
             <span>{{vm.book.publicationDate | date:'mediumDate'}}</span>
         </dd>
         <hr>
-        <dt><span translate="punicApp.book.price">Price</dt></dt>
+        <dt><span translate="talarionApp.book.price">Price</dt></dt>
         <dd>
             <span>{{vm.book.price}}<span>
         </dd>
         <hr>
-        <dt><span translate="punicApp.book.author">author</span></dt>
+        <dt><span translate="talarionApp.book.author">author</span></dt>
         <dd>
             <a ui-sref="author-detail({id:vm.book.author.id})">{{vm.book.author.name}}</a>
         </dd>

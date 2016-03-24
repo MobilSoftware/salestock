@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .directive('hasAuthority', hasAuthority);
 
     function hasAuthority(Principal) {

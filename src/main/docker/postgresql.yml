@@ -1,12 +1,12 @@
 version: '2'
 services:
-    punic-postgresql:
-        container_name: punic-postgresql
+    talarion-postgresql:
+        container_name: talarion-postgresql
         image: postgres:9.5.1
         # volumes:
-        #     - ~/volumes/jhipster/punic/postgresql/:/var/lib/postgresql/
+        #     - ~/volumes/jhipster/talarion/postgresql/:/var/lib/postgresql/
         environment:
-            - POSTGRES_USER=punic
-            - POSTGRES_PASSWORD=
+            - POSTGRES_USER=talarion
+            - POSTGRES_PASSWORD=talarion
         ports:
             - 5432:5432

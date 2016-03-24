@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .config(compileServiceConfig);
 
     compileServiceConfig.$inject = ['$compileProvider', 'ENV'];

@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('punicApp')
+        .module('talarionApp')
         .directive('passwordStrengthBar', passwordStrengthBar);
 
     function passwordStrengthBar () {
