@@ -1,0 +1,16 @@
+id,code,name,amount,price,version
+1,s000000001,planting,1,20000,0
+2,s000000002,greenhouse cleaning,1,27500,0
+3,s000000003,harvesting,1,22500,0
+4,s000000004,greenhouse construction,1,17500,0
+5,s000000005,distribution,1,15000,0
+6,s000000006,marketing,1,15000,0
+7,s000000007,online marketing,1,15000,0
+8,s000000008,pipe cleaning,1,30000,0
+9,s000000009,pipe construction,1,14000,0
+10,s000000010,nutrient flow tools construction,1,17500,0
+11,s000000011,sanitize,1,65000,0
+12,s000000012,dumping,1,30000,0
+13,s000000013,seeding,1,15000,0
+14,s000000014,security,1,55000,0
+15,s000000015,transportation,1,20000,0

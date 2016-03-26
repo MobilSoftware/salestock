@@ -1,9 +1,9 @@
 package com.mascova.talarion.config;
 
-import com.mascova.talarion.config.liquibase.AsyncSpringLiquibase;
-import com.codahale.metrics.MetricRegistry;
-import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
-import com.zaxxer.hikari.HikariDataSource;
+import java.util.Arrays;
+
+import javax.inject.Inject;
+import javax.sql.DataSource;
 
 import liquibase.integration.spring.SpringLiquibase;
 
@@ -18,16 +18,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.inject.Inject;
-import javax.sql.DataSource;
-
-import java.util.Arrays;
+import com.codahale.metrics.MetricRegistry;
+import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
+import com.mascova.talarion.config.liquibase.AsyncSpringLiquibase;
+import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 @EnableJpaRepositories("com.mascova.talarion.repository")
@@ -35,63 +34,68 @@ import java.util.Arrays;
 @EnableTransactionManagement
 public class DatabaseConfiguration {
 
-    private final Logger log = LoggerFactory.getLogger(DatabaseConfiguration.class);
+  private final Logger log = LoggerFactory.getLogger(DatabaseConfiguration.class);
 
-    @Inject
-    private Environment env;
+  @Inject
+  private Environment env;
 
-    @Autowired(required = false)
-    private MetricRegistry metricRegistry;
+  @Autowired(required = false)
+  private MetricRegistry metricRegistry;
 
-    @Bean(destroyMethod = "close")
-    @ConditionalOnExpression("#{!environment.acceptsProfiles('" + Constants.SPRING_PROFILE_CLOUD + "') && !environment.acceptsProfiles('" + Constants.SPRING_PROFILE_HEROKU + "')}")
-    @ConfigurationProperties(prefix = "spring.datasource.hikari")
-    public DataSource dataSource(DataSourceProperties dataSourceProperties) {
-        log.debug("Configuring Datasource");
-        if (dataSourceProperties.getUrl() == null) {
-            log.error("Your database connection pool configuration is incorrect! The application" +
-                    " cannot start. Please check your Spring profile, current profiles are: {}",
-                Arrays.toString(env.getActiveProfiles()));
+  @Bean(destroyMethod = "close")
+  @ConditionalOnExpression("#{!environment.acceptsProfiles('" + Constants.SPRING_PROFILE_CLOUD
+      + "') && !environment.acceptsProfiles('" + Constants.SPRING_PROFILE_HEROKU + "')}")
+  @ConfigurationProperties(prefix = "spring.datasource.hikari")
+  public DataSource dataSource(DataSourceProperties dataSourceProperties) {
+    log.debug("Configuring Datasource");
+    if (dataSourceProperties.getUrl() == null) {
+      log.error("Your database connection pool configuration is incorrect! The application"
+          + " cannot start. Please check your Spring profile, current profiles are: {}",
+          Arrays.toString(env.getActiveProfiles()));
 
-            throw new ApplicationContextException("Database connection pool is not configured correctly");
-        }
-        HikariDataSource hikariDataSource =  (HikariDataSource) DataSourceBuilder
-                .create(dataSourceProperties.getClassLoader())
-                .type(HikariDataSource.class)
-                .driverClassName(dataSourceProperties.getDriverClassName())
-                .url(dataSourceProperties.getUrl())
-                .username(dataSourceProperties.getUsername())
-                .password(dataSourceProperties.getPassword())
-                .build();
-
-        if (metricRegistry != null) {
-            hikariDataSource.setMetricRegistry(metricRegistry);
-        }
-        return hikariDataSource;
+      throw new ApplicationContextException("Database connection pool is not configured correctly");
     }
-    @Bean
-    public SpringLiquibase liquibase(DataSource dataSource, DataSourceProperties dataSourceProperties,
-        LiquibaseProperties liquibaseProperties) {
+    HikariDataSource hikariDataSource = (HikariDataSource) DataSourceBuilder
+        .create(dataSourceProperties.getClassLoader()).type(HikariDataSource.class)
+        .driverClassName(dataSourceProperties.getDriverClassName())
+        .url(dataSourceProperties.getUrl()).username(dataSourceProperties.getUsername())
+        .password(dataSourceProperties.getPassword()).build();
 
-        // Use liquibase.integration.spring.SpringLiquibase if you don't want Liquibase to start asynchronously
-        SpringLiquibase liquibase = new AsyncSpringLiquibase();
-        liquibase.setDataSource(dataSource);
-        liquibase.setChangeLog("classpath:config/liquibase/master.xml");
-        liquibase.setContexts(liquibaseProperties.getContexts());
-        liquibase.setDefaultSchema(liquibaseProperties.getDefaultSchema());
-        liquibase.setDropFirst(liquibaseProperties.isDropFirst());
-        if (env.acceptsProfiles(Constants.SPRING_PROFILE_NO_LIQUIBASE)) {
-            liquibase.setShouldRun(false);
-        } else {
-            liquibase.setShouldRun(liquibaseProperties.isEnabled());
-            log.debug("Configuring Liquibase");
-        }
+    if (metricRegistry != null) {
+      hikariDataSource.setMetricRegistry(metricRegistry);
+    }
+    return hikariDataSource;
+  }
 
-        return liquibase;
+  @Bean
+  public SpringLiquibase liquibase(DataSource dataSource,
+      DataSourceProperties dataSourceProperties, LiquibaseProperties liquibaseProperties) {
+
+    // Use liquibase.integration.spring.SpringLiquibase if you don't want Liquibase to start
+    // asynchronously
+    SpringLiquibase liquibase = new AsyncSpringLiquibase();
+    liquibase.setDataSource(dataSource);
+    liquibase.setChangeLog("classpath:config/liquibase/master.xml");
+    liquibase.setContexts(liquibaseProperties.getContexts());
+    liquibase.setDefaultSchema(liquibaseProperties.getDefaultSchema());
+    liquibase.setDropFirst(liquibaseProperties.isDropFirst());
+    if (env.acceptsProfiles(Constants.SPRING_PROFILE_NO_LIQUIBASE)) {
+      liquibase.setShouldRun(false);
+    } else {
+      liquibase.setShouldRun(liquibaseProperties.isEnabled());
+      log.debug("Configuring Liquibase");
+
+      if (env.acceptsProfiles(Constants.SPRING_PROFILE_DEVELOPMENT)) {
+        liquibase.setDropFirst(true);
+      }
+
     }
 
-    @Bean
-    public Hibernate4Module hibernate4Module() {
-        return new Hibernate4Module();
-    }
+    return liquibase;
+  }
+
+  @Bean
+  public Hibernate4Module hibernate4Module() {
+    return new Hibernate4Module();
+  }
 }
