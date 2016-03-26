@@ -5,9 +5,9 @@
         .module('talarionApp')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$rootScope', '$state', '$timeout', 'Auth', '$uibModalInstance'];
+    LoginController.$inject = ['$rootScope', '$state', '$timeout', 'Auth', '$uibModalInstance','Principal','$rootScope'];
 
-    function LoginController ($rootScope,$state, $timeout, Auth, $uibModalInstance) {
+    function LoginController ($rootScope,$state, $timeout, Auth, $uibModalInstance, Principal, $rootScope) {
         var vm = this;
 
         vm.authenticationError = false;
@@ -40,6 +40,12 @@
                 rememberMe: vm.rememberMe
             }).then(function () {
                 vm.authenticationError = false;
+
+                Principal.identity().then(function(account) {
+                  // Redefine $rootScope.account after logged in
+                    $rootScope.account = account;
+                });
+
                 $uibModalInstance.close();
                 // If we're redirected to login, our
                 // previousState is already set in the authExpiredInterceptor. When login succesful go to stored state
