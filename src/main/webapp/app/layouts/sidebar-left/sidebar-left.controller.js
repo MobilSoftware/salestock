@@ -5,9 +5,9 @@
         .module('talarionApp')
         .controller('SidebarLeftController', SidebarLeftController);
 
-    SidebarLeftController.$inject = ['$location', '$state', 'Auth', 'Principal', 'ENV', 'LoginService'];
+    SidebarLeftController.$inject = ['$location', '$state', 'Auth', 'Principal', 'ENV', 'LoginService','$rootScope'];
 
-    function SidebarLeftController($location, $state, Auth, Principal, ENV, LoginService) {
+    function SidebarLeftController($location, $state, Auth, Principal, ENV, LoginService, $rootScope) {
         var vm = this;
 
         vm.navCollapsed = true;
@@ -16,6 +16,12 @@
         vm.login = login;
         vm.logout = logout;
         vm.$state = $state;
+
+        // Define $rootScope.account if html is refreshed
+        Principal.identity().then(function(account) {
+            $rootScope.account = account;
+            console.log(JSON.stringify(account))
+        });
 
         function login() {
             LoginService.open();

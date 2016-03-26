@@ -1,15 +1,17 @@
 <!-- Start left navigation - profile shortcut -->
-<div class="sidebar-content">
+<div class="sidebar-content" ng-show="vm.isAuthenticated()">
     <div class="media">
-        <a class="pull-left has-notif avatar" href="page-profile.html">
-            <img src="content/images/profiles/nopic.png" alt="admin">
+        <a class="pull-left has-notif avatar" ui-sref="profile">
+            <img alt="profile" ng-show="account.profileImagePath == null" src="content/images/profiles/nopic.png">
+            <img alt="profile" ng-hide="account.profileImagePath == null" ng-src="{{account.profileImagePath}}">
             <i class="online"></i>
         </a>
         <div class="media-body">
             <h4 class="media-heading">Hello,
-                <span>Lee</span>
+              <span id="account-firstName">{{account.firstName}}</span>
             </h4>
-            <small>Web Designer</small>
+            <small>Group:
+                {{account.group.name}}</small>
         </div>
     </div>
 </div>
