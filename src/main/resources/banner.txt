@@ -1,9 +1,12 @@
 
-  ${AnsiColor.GREEN}      ██ ${AnsiColor.RED} ██    ██  ████████  ███████    ██████  ████████  ████████  ███████
-  ${AnsiColor.GREEN}      ██ ${AnsiColor.RED} ██    ██     ██     ██    ██  ██          ██     ██        ██    ██
-  ${AnsiColor.GREEN}      ██ ${AnsiColor.RED} ████████     ██     ███████    █████      ██     ██████    ███████
-  ${AnsiColor.GREEN}██    ██ ${AnsiColor.RED} ██    ██     ██     ██             ██     ██     ██        ██   ██
-  ${AnsiColor.GREEN} ██████  ${AnsiColor.RED} ██    ██  ████████  ██        ██████      ██     ████████  ██    ██
-
-${AnsiColor.BRIGHT_BLUE}:: JHipster 🤓  :: Running Spring Boot ${spring-boot.version} ::
-:: http://jhipster.github.io ::${AnsiColor.DEFAULT}
+  ${AnsiColor.RED}888888888888  88           88888888ba   888b      88      ad888888b,  
+  ${AnsiColor.RED}     88       88           88      "8b  8888b     88     d8"     "88  
+  ${AnsiColor.RED}     88       88           88      ,8P  88 `8b    88             a8P  
+  ${AnsiColor.RED}     88       88           88aaaaaa8P'  88  `8b   88          aad8"   
+  ${AnsiColor.RED}     88       88           88""""88'    88   `8b  88          ""Y8,   
+  ${AnsiColor.RED}     88       88           88    `8b    88    `8b 88             "8b  
+  ${AnsiColor.RED}     88       88           88     `8b   88     `8888     Y8,     a88  
+  ${AnsiColor.RED}     88       88888888888  88      `8b  88      `888      "Y888888P'
+     
+${AnsiColor.BRIGHT_BLUE}:: Talarion 3 🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: http://www.mascova.com ::${AnsiColor.DEFAULT}
