@@ -5,9 +5,9 @@
         .module('talarionApp')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$rootScope', '$state', '$timeout', 'Auth', '$uibModalInstance','Principal','$rootScope'];
+    LoginController.$inject = ['$rootScope', '$state', '$timeout', 'Auth', '$uibModalInstance', 'Principal'];
 
-    function LoginController ($rootScope,$state, $timeout, Auth, $uibModalInstance, Principal, $rootScope) {
+    function LoginController($rootScope, $state, $timeout, Auth, $uibModalInstance, Principal) {
         var vm = this;
 
         vm.authenticationError = false;
@@ -20,9 +20,11 @@
         vm.requestResetPassword = requestResetPassword;
         vm.username = null;
 
-        $timeout(function (){angular.element('[ng-model="vm.username"]').focus();});
+        $timeout(function() {
+            angular.element('[ng-model="vm.username"]').focus();
+        });
 
-        function cancel () {
+        function cancel() {
             vm.credentials = {
                 username: null,
                 password: null,
@@ -32,17 +34,17 @@
             $uibModalInstance.dismiss('cancel');
         }
 
-        function login (event) {
+        function login(event) {
             event.preventDefault();
             Auth.login({
                 username: vm.username,
                 password: vm.password,
                 rememberMe: vm.rememberMe
-            }).then(function () {
+            }).then(function() {
                 vm.authenticationError = false;
 
                 Principal.identity().then(function(account) {
-                  // Redefine $rootScope.account after logged in
+                    // Redefine $rootScope.account after logged in
                     $rootScope.account = account;
                 });
 
@@ -55,17 +57,17 @@
                 } else {
                     $rootScope.$broadcast('authenticationSuccess');
                 }
-            }).catch(function () {
+            }).catch(function() {
                 vm.authenticationError = true;
             });
         }
 
-        function register () {
+        function register() {
             $uibModalInstance.dismiss('cancel');
             $state.go('register');
         }
 
-        function requestResetPassword () {
+        function requestResetPassword() {
             $uibModalInstance.dismiss('cancel');
             $state.go('requestReset');
         }
