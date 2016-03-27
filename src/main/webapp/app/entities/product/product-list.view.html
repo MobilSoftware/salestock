@@ -1,7 +1,7 @@
-<div class="modal fade" id="deleteCategoryConfirmation">
+<div class="modal fade" id="deleteProductConfirmation">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form name="deleteForm" ng-submit="confirmDelete(category.id)">
+            <form name="deleteForm" ng-submit="confirmDelete(product.id)">
                 <div class="modal-header">
                     <button aria-hidden="true" class="close" data-dismiss="modal" ng-click="clear()" type="button">&times;</button>
                     <h4 class="modal-title">Confirm delete operation</h4>
@@ -23,14 +23,14 @@
 </div>
 <div class="header-content">
     <h2>
-        <i class="fa fa-list"></i>Category
+        <i class="fa fa-square"></i>Product
     </h2>
     <div class="breadcrumb-wrapper hidden-xs">
         <span class="label">You are here:</span>
         <ol class="breadcrumb">
             <li>
-                <i class="fa fa-list"></i>
-                Category
+                <i class="fa fa-square"></i>
+                Product
                 <i class="fa fa-angle-right"></i>
             </li>
         </ol>
@@ -41,56 +41,65 @@
         <div class="col-md-12">
             <div class="panel rounded shadow">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Category List</h3>
+                    <h3 class="panel-title">Product List</h3>
                 </div>
 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <button class="btn btn-sm btn-success" type="button" ui-sref="category-create">
+                            <button class="btn btn-sm btn-success" type="button" ui-sref="product-create">
                                 <i class="fa fa-plus"></i>
                                 &nbsp; Buat Baru
                             </button>
                         </div>
                         &nbsp;
                         <div class="table-responsive col-sm-12">
-                            <table class="table table-striped" id="setting-product-table" st-pipe="callServer" st-table="categoryList">
+                            <table class="table table-striped" id="setting-product-table" st-pipe="callServer" st-table="productList">
                                 <thead>
                                     <tr>
                                         <th style="width: 100px">Action</th>
                                         <th>ID</th>
+                                        <th>Code</th>
                                         <th>Name</th>
+                                        <th>Amount</th>
+                                        <th>Category</th>
                                     </tr>
+                                    <th></th>
                                     <th></th>
                                     <th></th>
                                     <th><input st-search="name"/></th>
+                                    <th></th>
+                                    <th><input st-search="categoryName"/></th>
                                     <tr>
-                                        <td class="text-center" colspan="3" st-items-by-page="20" st-pagination=""></td>
+                                        <td class="text-center" colspan="6" st-items-by-page="20" st-pagination=""></td>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="category in categoryList">
+                                    <tr ng-repeat="product in productList">
                                         <td>
-                                            <button class="btn btn-sm btn-warning" type="submit" ui-sref="category-edit({id:category.id})">
+                                            <button class="btn btn-sm btn-warning" type="submit" ui-sref="product-edit({id:product.id})">
                                                 <i class="fa fa-pencil"></i>
                                             </button>
                                             &nbsp;
-                                            <button class="btn btn-sm btn-danger" ng-click="delete(category.id)" type="button">
+                                            <button class="btn btn-sm btn-danger" ng-click="delete(product.id)" type="button">
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         </td>
-                                        <td>{{category.id}}</td>
-                                        <td>{{category.name}}</td>
+                                        <td>{{product.id}}</td>
+                                        <td>{{product.code}}</td>
+                                        <td>{{product.name}}</td>
+                                        <td>{{product.amount}}</td>
+                                        <td>{{product.category.name}}</td>
                                     </tbody>
                                     <tbody ng-show="isLoading">
                                         <tr>
-                                            <td class="text-center" colspan="3">Loading ...
+                                            <td class="text-center" colspan="6">Loading ...
                                             </td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <td class="text-center" colspan="3" st-items-by-page="20" st-pagination=""></td>
+                                            <td class="text-center" colspan="6" st-items-by-page="20" st-pagination=""></td>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -104,4 +113,6 @@
         </div>
 <!-- /.row -->
     </div>
-<footer class="footer-content" ng-include="'app/layouts/footer/footer.html'"></footer>
+    <footer class="footer-content" ng-include="'app/layouts/footer/footer.html'">
+        2015 &copy; Mascova
+    </footer>
