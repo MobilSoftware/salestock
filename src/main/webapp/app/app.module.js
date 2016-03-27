@@ -18,7 +18,9 @@
             // jhipster-needle-angularjs-add-module JHipster will add new module here
             'angular-loading-bar',
             'smart-table',
-            'angular-growl'
+            'angular-growl',
+            'angucomplete-alt',
+            'ng-currency'
         ])
         .run(run);
 

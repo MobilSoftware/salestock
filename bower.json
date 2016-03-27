@@ -29,7 +29,9 @@
     "ngInfiniteScroll": "1.2.2",
     "swagger-ui": "2.1.4",
     "angular-growl-v2": "^0.7.9",
-    "angular-smart-table": "^2.1.8"
+    "angular-smart-table": "^2.1.8",
+    "angucomplete-alt": "^2.2.0",
+    "ng-currency": "^0.9.3"
   },
   "devDependencies": {
     "angular-mocks": "1.5.2",
