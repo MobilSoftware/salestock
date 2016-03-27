@@ -55,6 +55,8 @@
         <script src="themes/blankon/1.1.5/assets/global/plugins/bower_components/respond-minmax/dest/respond.min.js"></script>
         <![endif]-->
     <!--/ END IE SUPPORT -->
+
+    <link href="bower_components/angular-growl-v2/build/angular-growl.min.css" rel="stylesheet">
 </head>
 <!--/ END HEAD -->
 
@@ -99,6 +101,8 @@
     -->
 
 <body ng-app="talarionApp">
+
+  <div growl></div>
 
     <!--[if lt IE 9]>
         <p class="upgrade-browser">Upps!! You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</p>
@@ -633,6 +637,8 @@
     <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="bower_components/angular-smart-table/dist/smart-table.min.js"></script>
+    <script src="bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -673,6 +679,11 @@
     <script src="app/entities/author/author-dialog.controller.js"></script>
     <script src="app/entities/author/author-detail.controller.js"></script>
     <script src="app/entities/author/author-delete-dialog.controller.js"></script>
+    <script src="app/entities/category/category.state.js"></script>
+    <script src="app/entities/category/category.service.js"></script>
+    <script src="app/entities/category/category-list.controller.js"></script>
+    <script src="app/entities/category/category-create.controller.js"></script>
+    <script src="app/entities/category/category-edit.controller.js"></script>
     <script src="app/components/util/truncate-words.filter.js"></script>
     <script src="app/components/util/truncate-characters.filter.js"></script>
     <script src="app/components/util/sort.directive.js"></script>
