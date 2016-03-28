@@ -42,6 +42,23 @@ liquibase:
 
 server:
     port: 8080
+    
+image:
+    host:
+      url: http://localhost:8080
+      path:
+        system: user.dir   
+        relative:
+          gallery: /content/images/gallery/
+          profile: /content/images/profiles/
+          
+file:
+    host:
+      url: http://localhost:8080
+      path:
+        system: user.dir   
+        relative:
+          document: /content/files/documents/    
 
 # ===================================================================
 # JHipster specific properties
