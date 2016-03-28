@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -65,7 +66,9 @@ public class ProvinceResource {
     if (province.getId() == null) {
       return create(province);
     }
-    provinceRepository.save(province);
+    Province persistedProvince = provinceRepository.findOne(province.getId());
+    BeanUtils.copyProperties(province, persistedProvince, "id", "version", "districts");
+    provinceRepository.save(persistedProvince);
     return ResponseEntity.ok().build();
   }
 

@@ -75,7 +75,7 @@ public class DistrictResource {
     }
 
     District persistedDistrict = districtRepository.findOne(district.getId());
-    BeanUtils.copyProperties(district, persistedDistrict, "province");
+    BeanUtils.copyProperties(district, persistedDistrict, "id", "version", "province");
 
     if (persistedDistrict.getProvince().getId().longValue() != district.getProvince().getId()
         .longValue()) {

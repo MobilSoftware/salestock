@@ -77,7 +77,7 @@ public class SubDistrictResource {
     }
 
     SubDistrict persistedSubDistrict = subDistrictRepository.findOne(subDistrict.getId());
-    BeanUtils.copyProperties(subDistrict, persistedSubDistrict, "district");
+    BeanUtils.copyProperties(subDistrict, persistedSubDistrict, "id", "version", "district");
 
     if (persistedSubDistrict.getDistrict().getId().longValue() != subDistrict.getDistrict().getId()
         .longValue()) {

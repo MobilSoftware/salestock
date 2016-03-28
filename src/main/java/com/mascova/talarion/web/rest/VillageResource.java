@@ -76,7 +76,7 @@ public class VillageResource {
     }
 
     Village persistedVillage = villageRepository.findOne(village.getId());
-    BeanUtils.copyProperties(village, persistedVillage, "subDistrict");
+    BeanUtils.copyProperties(village, persistedVillage, "id", "version", "subDistrict");
 
     if (persistedVillage.getSubDistrict().getId().longValue() != village.getSubDistrict().getId()
         .longValue()) {
