@@ -9,4 +9,5 @@
   ${AnsiColor.RED}     88       88888888888  88      `8b  88      `888      "Y888888P'
      
 ${AnsiColor.BRIGHT_BLUE}:: Talarion 3 🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: Talarion 1.0 Based on JHipster 3.0.0 ::${AnsiColor.DEFAULT}
 :: http://www.mascova.com ::${AnsiColor.DEFAULT}
