@@ -2,17 +2,16 @@
 <div>
     <h2><span translate="talarionApp.author.detail.title">Author</span> {{vm.author.id}}</h2>
     <hr>
-    <dl class="dl-horizontal">
-        <dt><span translate="talarionApp.author.name">Name</dt></dt>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="talarionApp.author.name">Name</span></dt>
         <dd>
-            <span>{{vm.author.name}}<span>
+            <span>{{vm.author.name}}</span>
         </dd>
-        <hr>
-        <dt><span translate="talarionApp.author.birthDate">BirthDate</dt></dt>
+        <dt><span translate="talarionApp.author.birthDate">Birth Date</span></dt>
         <dd>
             <span>{{vm.author.birthDate | date:'mediumDate'}}</span>
         </dd>
-        <hr>
     </dl>
 
     <button type="submit"

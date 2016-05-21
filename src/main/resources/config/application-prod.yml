@@ -46,6 +46,7 @@ server:
     compression:
         enabled: true
         mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
+        min-response-size: 1024        
         
 image:
     host:
@@ -69,6 +70,10 @@ file:
 # ===================================================================
 
 jhipster:
+    security:
+        rememberMe:
+            # security key (this key should be unique for your application, and kept secret)
+            key: 9a239d5fb01829ec05adaa5a52ee080598686899
     http:
         cache: # Used by the CachingHttpHeadersFilter
             timeToLiveInDays: 1461
@@ -85,7 +90,7 @@ jhipster:
             host: localhost
             port: 2003
             prefix: talarion
-        logs: # report metrics in the logs
+        logs: # Reports Dropwizard metrics in the logs
             enabled: false
             reportFrequency: 60 # in seconds
     logging:
@@ -94,3 +99,5 @@ jhipster:
             host: localhost
             port: 5000
             queueSize: 512
+    swagger: # swagger is disabled. It can be disabled by pasing 'no-swagger' profile at run time as well
+        enabled: false            

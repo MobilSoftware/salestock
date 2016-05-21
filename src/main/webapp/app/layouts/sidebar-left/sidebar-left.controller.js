@@ -5,14 +5,13 @@
         .module('talarionApp')
         .controller('SidebarLeftController', SidebarLeftController);
 
-    SidebarLeftController.$inject = ['$location', '$state', 'Auth', 'Principal', 'ENV', 'LoginService','$rootScope'];
+    SidebarLeftController.$inject = ['$location', '$state', 'Auth', 'Principal', 'LoginService','$rootScope'];
 
-    function SidebarLeftController($location, $state, Auth, Principal, ENV, LoginService, $rootScope) {
+    function SidebarLeftController($location, $state, Auth, Principal, LoginService, $rootScope) {
         var vm = this;
 
         vm.navCollapsed = true;
         vm.isAuthenticated = Principal.isAuthenticated;
-        vm.inProduction = ENV === 'prod';
         vm.login = login;
         vm.logout = logout;
         vm.$state = $state;

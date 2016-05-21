@@ -2,32 +2,28 @@
 <div>
     <h2><span translate="talarionApp.book.detail.title">Book</span> {{vm.book.id}}</h2>
     <hr>
-    <dl class="dl-horizontal">
-        <dt><span translate="talarionApp.book.title">Title</dt></dt>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="talarionApp.book.title">Title</span></dt>
         <dd>
-            <span>{{vm.book.title}}<span>
+            <span>{{vm.book.title}}</span>
         </dd>
-        <hr>
-        <dt><span translate="talarionApp.book.description">Description</dt></dt>
+        <dt><span translate="talarionApp.book.description">Description</span></dt>
         <dd>
-            <span>{{vm.book.description}}<span>
+            <span>{{vm.book.description}}</span>
         </dd>
-        <hr>
-        <dt><span translate="talarionApp.book.publicationDate">PublicationDate</dt></dt>
+        <dt><span translate="talarionApp.book.publicationDate">Publication Date</span></dt>
         <dd>
             <span>{{vm.book.publicationDate | date:'mediumDate'}}</span>
         </dd>
-        <hr>
-        <dt><span translate="talarionApp.book.price">Price</dt></dt>
+        <dt><span translate="talarionApp.book.price">Price</span></dt>
         <dd>
-            <span>{{vm.book.price}}<span>
+            <span>{{vm.book.price}}</span>
         </dd>
-        <hr>
-        <dt><span translate="talarionApp.book.author">author</span></dt>
+        <dt><span translate="talarionApp.book.author">Author</span></dt>
         <dd>
             <a ui-sref="author-detail({id:vm.book.author.id})">{{vm.book.author.name}}</a>
         </dd>
-        <hr>
     </dl>
 
     <button type="submit"

@@ -1,9 +1,9 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "3.0.0",
-    "baseName": "talarion",
-    "packageName": "com.mascova.talarion",
-    "packageFolder": "com/mascova/talarion",
+    "jhipsterVersion": "3.3.0",
+    "baseName": "punic",
+    "packageName": "com.mascova.punic",
+    "packageFolder": "com/mascova/punic",
     "serverPort": "8080",
     "authenticationType": "session",
     "hibernateCache": "no",
@@ -15,12 +15,13 @@
     "searchEngine": "no",
     "buildTool": "maven",
     "enableSocialSignIn": false,
-    "rememberMeKey": "147cb122c10321fca185226a984351965fc0b9fd",
+    "rememberMeKey": "9a239d5fb01829ec05adaa5a52ee080598686899",
     "useSass": false,
     "applicationType": "monolith",
     "testFrameworks": [
       "gatling"
     ],
+    "jhiPrefix": "jhi",
     "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": [

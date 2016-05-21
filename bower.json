@@ -21,9 +21,10 @@
     "angular-translate-storage-cookie": "2.11.0",
     "angular-ui-router": "0.2.18",
     "bootstrap": "3.3.6",
-    "bootstrap-ui-datetime-picker": "2.2.3",
+    "bootstrap-ui-datetime-picker": "2.3.1",
     "jquery": "2.2.2",
-    "json3": "3.3.2",
+    "json3": "^3.3.2",
+    "messageformat": "^0.3.1",
     "modernizr": "3.3.1",
     "ng-file-upload": "12.0.4",
     "ngInfiniteScroll": "1.2.2",
@@ -34,8 +35,7 @@
     "ng-currency": "^0.9.3"
   },
   "devDependencies": {
-    "angular-mocks": "1.5.2",
-    "angular-scenario": "1.5.2"
+    "angular-mocks": "1.5.2"
   },
   "overrides": {
     "angular": {
@@ -43,25 +43,26 @@
         "jquery": "2.2.2"
       }
     },
+    "angular-cache-buster": {
+      "dependencies": {
+        "angular": "1.5.2"
+      }
+    },
+    "angular-dynamic-locale": {
+      "dependencies": {
+        "angular": "1.5.2"
+      }
+    },
     "bootstrap": {
       "main": [
-        "dist/js/bootstrap.js",
-        "dist/css/bootstrap.css",
-        "less/bootstrap.less"
+        "dist/css/bootstrap.css"
       ]
     },
-    "messageformat": {
-      "main": [
-        "messageformat.js",
-        "locale/en.js",
-        "locale/fr.js"
-      ]
+    "resolutions": {
+      "angular": "1.5.2",
+      "angular-cookies": "1.5.2",
+      "angular-bootstrap": "1.2.5",
+      "jquery": "2.2.2"
     }
-  },
-  "resolutions": {
-    "angular": "1.5.2",
-    "angular-cookies": "1.5.2",
-    "angular-bootstrap": "1.2.5",
-    "jquery": "2.2.2"
   }
 }

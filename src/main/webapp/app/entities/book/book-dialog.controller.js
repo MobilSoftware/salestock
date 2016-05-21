@@ -5,17 +5,16 @@
         .module('talarionApp')
         .controller('BookDialogController', BookDialogController);
 
-    BookDialogController.$inject = ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Book', 'Author'];
+    BookDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Book', 'Author'];
 
-    function BookDialogController ($scope, $stateParams, $uibModalInstance, entity, Book, Author) {
+    function BookDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Book, Author) {
         var vm = this;
         vm.book = entity;
         vm.authors = Author.query();
-        vm.load = function(id) {
-            Book.get({id : id}, function(result) {
-                vm.book = result;
-            });
-        };
+
+        $timeout(function (){
+            angular.element('.form-group:eq(1)>input').focus();
+        });
 
         var onSaveSuccess = function (result) {
             $scope.$emit('talarionApp:bookUpdate', result);
