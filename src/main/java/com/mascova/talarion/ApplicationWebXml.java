@@ -3,6 +3,8 @@ package com.mascova.talarion;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 
+import com.mascova.talarion.config.DefaultProfileUtil;
+
 /**
  * This is a helper Java class that provides an alternative to creating a web.xml. This will be
  * invoked only when the application is deployed to a servlet container like Tomcat, Jboss etc.
@@ -14,7 +16,8 @@ public class ApplicationWebXml extends SpringBootServletInitializer {
     /**
      * set a default to use when no profile is configured.
      */
-    TalarionApp.addDefaultProfile(application.application());
+    DefaultProfileUtil.addDefaultProfile(application.application());
     return application.sources(TalarionApp.class);
+
   }
 }

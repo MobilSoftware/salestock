@@ -32,6 +32,9 @@ spring:
             hibernate.generate_statistics: true
     mail:
         host: localhost
+        port: 25
+        username:
+        password:        
     messages:
         cache-seconds: 1
     thymeleaf:
