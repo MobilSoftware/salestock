@@ -21,6 +21,7 @@ import com.mascova.talarion.domain.User;
 import com.mascova.talarion.repository.AuthorityRepository;
 import com.mascova.talarion.repository.PersistentTokenRepository;
 import com.mascova.talarion.repository.UserRepository;
+import com.mascova.talarion.security.AuthoritiesConstants;
 import com.mascova.talarion.security.SecurityUtils;
 import com.mascova.talarion.service.util.RandomUtil;
 import com.mascova.talarion.web.rest.dto.ManagedUserDTO;
@@ -86,7 +87,7 @@ public class UserService {
       String lastName, String email, String langKey) {
 
     User newUser = new User();
-    Authority authority = authorityRepository.findOne("ROLE_USER");
+    Authority authority = authorityRepository.findOne(AuthoritiesConstants.USER);
     Set<Authority> authorities = new HashSet<>();
     String encryptedPassword = passwordEncoder.encode(password);
     newUser.setLogin(login);
