@@ -18,10 +18,10 @@ spring:
         livereload:
             enabled: false
     datasource:
-        url: jdbc:postgresql://localhost:5432/talarion
+        url: jdbc:postgresql://localhost:5432/salestock
         name:
-        username: talarion
-        password: talarion
+        username: salestock
+        password: salestock
     jpa:
         database-platform: com.mascova.talarion.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL
