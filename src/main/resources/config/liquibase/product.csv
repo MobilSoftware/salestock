@@ -1,16 +1,16 @@
 id,code,buy_price,name,amount,sell_price,version,category_id
-1,p00000001,15000,kangkong,1,20000,0,1
-2,p00000002,22500,lettuce,1,27500,0,1
-3,p00000003,17500,pepper,1,22500,0,1
-4,p00000004,12500,tomato,1,17500,0,1
-5,p00000005,10000,cucumber,1,15000,0,1
-6,p00000006,10000,manure organic,1,15000,0,2
-7,p00000007,10000,compost,1,15000,0,2
-8,p00000008,25000,AB Mix,1,30000,0,2
-9,p00000009,9000,NPK,1,14000,0,2
-10,p00000010,12500,ZA,1,17500,0,2
-11,p00000011,60000,rockwool,1,65000,0,3
-12,p00000012,25000,perlite,1,30000,0,3
-13,p00000013,10000,coconut coir,1,15000,0,3
-14,p00000014,45000,hydroton,1,55000,0,3
-15,p00000015,10000,rice hull,1,20000,0,3
+1,p00000001,15000,Dafnie Plain Longsleeve Muslim Dress,1,20000,0,1
+2,p00000002,22500,Amevia Batik Peplum Mini Dress,1,27500,0,1
+3,p00000003,17500,Calvita Tartan Overall Muslim Dress,1,22500,0,1
+4,p00000004,12500,Geffatyne Plain Flare Mini Dress,1,17500,0,1
+5,p00000005,10000,Frisyna Flowery Longsleeve Maxi Dress,1,15000,0,1
+6,p00000006,10000,Shafeeya Ombre Longsleeve Muslim Set,1,15000,0,2
+7,p00000007,10000,Calvita Tartan Overall Muslim Dress,1,15000,0,2
+8,p00000008,25000,Dulina Circle Pashmina Scarf,1,30000,0,2
+9,p00000009,9000,Sukira Flowery Pashmina Scarf,1,14000,0,2
+10,p00000010,12500,Hanjia Stripe Pashmina Scarf,1,17500,0,2
+11,p00000011,60000,Velinca Flowery Strap Heels,1,65000,0,3
+12,p00000012,25000,Raziyani Two Tone Ankle Strap Wedge,1,30000,0,3
+13,p00000013,10000,Reciva Sequins Strap Sandals,1,15000,0,3
+14,p00000014,45000,Jilani Plain Braided Sandals,1,55000,0,3
+15,p00000015,10000,Myona Lace Up Platform Sneakers,1,20000,0,3

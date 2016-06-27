@@ -11,10 +11,10 @@
   </parent>
 
   <groupId>com.mascova.talarion</groupId>
-  <artifactId>talarion3</artifactId>
+  <artifactId>salestock</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
-  <name>talarion3</name>
+  <name>salestock</name>
 
   <prerequisites>
     <maven>3.0.0</maven>
