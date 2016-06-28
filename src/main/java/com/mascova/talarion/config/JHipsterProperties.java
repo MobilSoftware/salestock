@@ -175,9 +175,9 @@ public class JHipsterProperties {
 
   public static class Swagger {
 
-    private String title = "talarion API";
+    private String title = "Sale Stock API";
 
-    private String description = "talarion API documentation";
+    private String description = "Sale Stock API documentation";
 
     private String version = "0.0.1";
 
