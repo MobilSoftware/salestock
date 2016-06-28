@@ -14,7 +14,12 @@
       </column>
       <column name="name" type="varchar(255)" />
       <column name="version" type="bigint" />
+      <column name="parent_id" type="bigint" />
     </createTable>
+
+    <addForeignKeyConstraint baseColumnNames="parent_id" baseTableName="category"
+      constraintName="fk_p6elut499cl32in8b8j8sy2n4" referencedColumnNames="id" referencedTableName="category" />
+
 
     <loadData encoding="UTF-8" file="config/liquibase/category.csv" separator=","
       tableName="category">

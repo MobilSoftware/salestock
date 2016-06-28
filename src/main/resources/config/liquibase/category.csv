@@ -1,4 +1,4 @@
-id,name,version
-1,Dress,0
-2,Baju Muslim,0
-3,Sepatu,0
+id,name,version,parent_id
+1,Dress,0,NULL
+2,Baju Muslim,0,1
+3,Sepatu,0,NULL

@@ -11,6 +11,7 @@ angular.module('talarionApp').controller('CategoryCreateController',
       $scope.submitted = false;
 
         $scope.category = {};
+        $scope.category.parent = {};
 
         $scope.create = function() {
 
@@ -28,5 +29,13 @@ angular.module('talarionApp').controller('CategoryCreateController',
             }
 
         };
+
+        $scope.selectCategoryAc = function(selected) {
+
+            // console.log(JSON.stringify(selected));
+
+            $scope.category.parent = selected.originalObject;
+
+        }
 
     });

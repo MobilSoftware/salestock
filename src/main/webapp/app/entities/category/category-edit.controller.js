@@ -11,6 +11,7 @@ angular.module('talarionApp').controller('CategoryEditController',
         $scope.submitted = false;
 
         $scope.category = {};
+        $scope.category.parent = {};
 
         $scope.load = function(id) {
             Category.get({
@@ -37,5 +38,23 @@ angular.module('talarionApp').controller('CategoryEditController',
             }
 
         };
+
+        $scope.selectCategoryAc = function(selected) {
+
+            if (selected != undefined) {
+                // console.log(JSON.stringify(selected));
+
+                $scope.category.parent = selected.originalObject;
+            }
+
+        }
+
+        $scope.clearInput = function(id) {
+            if (id) {
+                $scope.$broadcast('angucomplete-alt:clearInput', id);
+            } else {
+                $scope.$broadcast('angucomplete-alt:clearInput');
+            }
+        }
 
     });
