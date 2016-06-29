@@ -61,8 +61,8 @@ jhipster:
     mail:
         from: talarion@localhost
     swagger:
-        title: talarion API
-        description: talarion API documentation
+        title: Sale Stock API
+        description: Sale Stock API documentation
         version: 0.0.1
         termsOfServiceUrl:
         contactName:
