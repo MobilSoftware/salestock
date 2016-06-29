@@ -63,6 +63,8 @@
                                         <th>Name</th>
                                         <th>Amount</th>
                                         <th>Category</th>
+                                        <th>Size</th>
+                                        <th>Color</th>
                                     </tr>
                                     <th></th>
                                     <th></th>
@@ -70,8 +72,10 @@
                                     <th><input st-search="name"/></th>
                                     <th></th>
                                     <th><input st-search="categoryName"/></th>
+                                    <th></th>
+                                    <th></th>
                                     <tr>
-                                        <td class="text-center" colspan="6" st-items-by-page="20" st-pagination=""></td>
+                                        <td class="text-center" colspan="8" st-items-by-page="20" st-pagination=""></td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -90,16 +94,18 @@
                                         <td>{{product.name}}</td>
                                         <td>{{product.amount}}</td>
                                         <td>{{product.category.name}}</td>
+                                        <td>{{product.productSize.name}}</td>
+                                        <td>{{product.productColor.name}}</td>
                                     </tbody>
                                     <tbody ng-show="isLoading">
                                         <tr>
-                                            <td class="text-center" colspan="6">Loading ...
+                                            <td class="text-center" colspan="8">Loading ...
                                             </td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <td class="text-center" colspan="6" st-items-by-page="20" st-pagination=""></td>
+                                            <td class="text-center" colspan="8" st-items-by-page="20" st-pagination=""></td>
                                         </tr>
                                     </tfoot>
                                 </table>

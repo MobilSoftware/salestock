@@ -12,6 +12,7 @@ angular.module('talarionApp').controller('ProductEditController',
 
         $scope.product = {};
         $scope.product.category = {};
+        $scope.product.productSize = {};
 
         $scope.load = function(id) {
             Product.get({
@@ -93,6 +94,16 @@ angular.module('talarionApp').controller('ProductEditController',
                 // console.log(JSON.stringify(selected));
 
                 $scope.product.category = selected.originalObject;
+            }
+
+        }
+
+        $scope.selectProductSizeAc = function(selected) {
+
+            if (selected != undefined) {
+                // console.log(JSON.stringify(selected));
+
+                $scope.product.productSize = selected.originalObject;
             }
 
         }

@@ -18,10 +18,18 @@
       <column name="sell_price" type="numeric(19,2)" />
       <column name="version" type="bigint" />
       <column name="category_id" type="bigint" />
+      <column name="product_color_id" type="bigint" />
+      <column name="product_size_id" type="bigint" />
     </createTable>
 
     <addForeignKeyConstraint baseColumnNames="category_id" baseTableName="product"
       constraintName="fk_product_category_id" referencedColumnNames="id" referencedTableName="category" />
+
+    <addForeignKeyConstraint baseColumnNames="product_color_id" baseTableName="product"
+      constraintName="fk_3d36qfa3ollj185kc7ik6dnbg" referencedColumnNames="id" referencedTableName="product_color" />
+
+    <addForeignKeyConstraint baseColumnNames="product_size_id" baseTableName="product"
+      constraintName="fk_7n0gftkiecg343m325c8u5sr1" referencedColumnNames="id" referencedTableName="product_size" />
 
     <loadData encoding="UTF-8" file="config/liquibase/product.csv" separator="," tableName="product">
     </loadData>

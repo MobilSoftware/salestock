@@ -128,9 +128,24 @@
                         <div class="form-group" ng-class="{ 'has-error': submitted && createForm.category-name.$invalid }">
                             <label class="col-sm-3 control-label" for="categoryName">Category</label>
                             <div class="col-sm-7">
-                                <angucomplete-alt description-field="name" id="categoryName" name="categoryName" input-class="form-control form-control-small" pause="400" placeholder="Type Category Name Here ..." remote-url="http://localhost:8080/api/category?name=" selected-object="selectCategoryAc" title-field="name"/>
+                                <angucomplete-alt description-field="name" id="categoryName" name="categoryName" input-class="form-control form-control-small" pause="400" placeholder="Type Category Name Here ..." remote-url="/api/category?name=" selected-object="selectCategoryAc" title-field="name"/>
                                 <input class="form-control" id="categoryName" name="categoryName" ng-model="product.category.name" readonly required type="text">
                                 <div ng-if="submitted" ng-messages="createForm.categoryName.$error">
+                                    <div ng-messages-include="scripts2/components/messages/global-messages.html"></div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-sm-2">
+                                <button class="btn btn-circle btn-default btn-stroke" id="lookupButton" ng-click="showLookup()" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div> -->
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': submitted && createForm.productSizeName.$invalid }">
+                            <label class="col-sm-3 control-label" for="categoryName">Size</label>
+                            <div class="col-sm-7">
+                                <angucomplete-alt description-field="name" id="productSizeName" name="productSizeName" input-class="form-control form-control-small" pause="400" placeholder="Type Product Size Here ..." remote-url="/api/productSize?name=" selected-object="selectProductSizeAc" title-field="name" minlength="1"/>
+                                <input class="form-control" id="productSizeName" name="productSizeName" ng-model="product.productSize.name" readonly required type="text">
+                                <div ng-if="submitted" ng-messages="createForm.productSizeName.$error">
                                     <div ng-messages-include="scripts2/components/messages/global-messages.html"></div>
                                 </div>
                             </div>

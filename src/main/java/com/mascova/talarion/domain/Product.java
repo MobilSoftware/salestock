@@ -52,6 +52,14 @@ public class Product implements Serializable, Searchable {
   @JsonIgnore
   private Set<SalesItem> salesItems = new HashSet<>();
 
+  @ManyToOne
+  @JoinColumn(name = "product_size_id")
+  private ProductSize productSize;
+
+  @ManyToOne
+  @JoinColumn(name = "product_color_id")
+  private ProductColor productColor;
+
   public Long getId() {
     return id;
   }
@@ -146,6 +154,22 @@ public class Product implements Serializable, Searchable {
 
   public void setSalesItems(Set<SalesItem> salesItems) {
     this.salesItems = salesItems;
+  }
+
+  public ProductSize getProductSize() {
+    return productSize;
+  }
+
+  public void setProductSize(ProductSize productSize) {
+    this.productSize = productSize;
+  }
+
+  public ProductColor getProductColor() {
+    return productColor;
+  }
+
+  public void setProductColor(ProductColor productColor) {
+    this.productColor = productColor;
   }
 
 }

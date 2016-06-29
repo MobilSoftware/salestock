@@ -15,6 +15,10 @@
     relativeToChangelogFile="false" />
   <include file="classpath:config/liquibase/changelog/village.xml" relativeToChangelogFile="false" />
   <include file="classpath:config/liquibase/changelog/category.xml" relativeToChangelogFile="false" />
+  <include file="classpath:config/liquibase/changelog/productSize.xml"
+    relativeToChangelogFile="false" />
+  <include file="classpath:config/liquibase/changelog/productColor.xml"
+    relativeToChangelogFile="false" />
   <include file="classpath:config/liquibase/changelog/product.xml" relativeToChangelogFile="false" />
   <include file="classpath:config/liquibase/changelog/service.xml" relativeToChangelogFile="false" />
 
@@ -25,7 +29,5 @@
 
   <include file="classpath:config/liquibase/changelog/image.xml" relativeToChangelogFile="false" />
   <include file="classpath:config/liquibase/changelog/document.xml" relativeToChangelogFile="false" />
-  
-  <include file="classpath:config/liquibase/changelog/productSize.xml" relativeToChangelogFile="false" />
-  <include file="classpath:config/liquibase/changelog/productColor.xml" relativeToChangelogFile="false" />
+
 </databaseChangeLog>
