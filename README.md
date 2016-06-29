@@ -31,3 +31,57 @@ http://188.166.235.127
 - And here is API Docs for Category:
 ![](https://raw.githubusercontent.com/irfanr/salestock/master/5-api-docs-product.png)
 
+For testing purpose, let's use REST Client provided as addon by Mozilla Firefox (you can use similiar tools with Chrome or other standalone REST Client tools):
+
+https://addons.mozilla.org/en-US/firefox/addon/restclient/
+
+After successful install, make sure that you've logged as admin in cloud site since the REST client will use the cookies for REST resource calls.
+
+It is important also to add Custom Header for HTTP Request related with the testing:
+- Add X-CSRF-TOKEN, the value can be taken after you've access the cloud site. After the site is completely loaded, press F12 (I'm using Firefox with Firebug Addon), choose "Console" tab. Click one of the request and you'll see "x-csrf-token" with value on the right. Copy the value and added it as Custom Header value for X-CSRF-TOKEN.
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/6-get-token.png)
+
+- Add Content-Type with value of "application/json" to make sure that request and response will be handled as json type. 
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/7-x-csrf-token-input.png)
+
+### Category
+
+- Category Listing and Search
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/category-list.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/category-list-output.png)
+
+- Category Create
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/category-create.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/category-create-output.png)
+
+- Category Detail
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/category-detail.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/category-detail-output.png)
+
+- Category Update
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/category-update.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/category-update-output.png)
+
+- Category Delete
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/category-delete.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/category-delete-output.png)
+
+### Product
+
+- Product Listing and Search
+- Product Create
+- Product Update
+- Product Delete
+
