@@ -77,8 +77,7 @@ public class CategoryResource {
   public ResponseEntity<List<Category>> getAll(
       @RequestParam(value = "page", required = false) Integer offset,
       @RequestParam(value = "size", required = false) Integer size,
-      @RequestParam(value = "name", required = false) String name,
-      @RequestParam(value = "name2", required = false) String name2) throws URISyntaxException {
+      @RequestParam(value = "name", required = false) String name) throws URISyntaxException {
 
     CategorySpecificationBuilder builder = new CategorySpecificationBuilder();
 
