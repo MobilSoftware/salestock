@@ -10,6 +10,8 @@ import org.springframework.data.jpa.domain.Specification;
 
 import com.mascova.talarion.domain.Category;
 import com.mascova.talarion.domain.Product;
+import com.mascova.talarion.domain.ProductColor;
+import com.mascova.talarion.domain.ProductSize;
 
 public class ProductSpecification implements Specification<Product> {
 
@@ -33,6 +35,12 @@ public class ProductSpecification implements Specification<Product> {
       if (criteria.getKey().equalsIgnoreCase("category.name")) {
         Join<Product, Category> categoryJoin = productRoot.join("category");
         return builder.like(categoryJoin.<String> get("name"), "%" + criteria.getValue() + "%");
+      } else if (criteria.getKey().equalsIgnoreCase("productSize.name")) {
+        Join<Product, ProductSize> productSizeJoin = productRoot.join("productSize");
+        return builder.like(productSizeJoin.<String> get("name"), "%" + criteria.getValue() + "%");
+      } else if (criteria.getKey().equalsIgnoreCase("productColor.name")) {
+        Join<Product, ProductColor> productColorJoin = productRoot.join("productColor");
+        return builder.like(productColorJoin.<String> get("name"), "%" + criteria.getValue() + "%");
       } else if (productRoot.get(criteria.getKey()).getJavaType() == String.class) {
         return builder.like(productRoot.<String> get(criteria.getKey()), "%" + criteria.getValue()
             + "%");

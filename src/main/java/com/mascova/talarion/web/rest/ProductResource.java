@@ -78,7 +78,9 @@ public class ProductResource {
       @RequestParam(value = "page", required = false) Integer offset,
       @RequestParam(value = "size", required = false) Integer size,
       @RequestParam(value = "name", required = false) String name,
-      @RequestParam(value = "categoryName", required = false) String categoryName)
+      @RequestParam(value = "categoryName", required = false) String categoryName,
+      @RequestParam(value = "productSizeName", required = false) String productSizeName,
+      @RequestParam(value = "productColorName", required = false) String productColorName)
       throws URISyntaxException {
 
     ProductSpecificationBuilder builder = new ProductSpecificationBuilder();
@@ -88,6 +90,12 @@ public class ProductResource {
     }
     if (StringUtils.isNotBlank(categoryName)) {
       builder.with("category.name", ":", categoryName);
+    }
+    if (StringUtils.isNotBlank(productSizeName)) {
+      builder.with("productSize.name", ":", productSizeName);
+    }
+    if (StringUtils.isNotBlank(productColorName)) {
+      builder.with("productColor.name", ":", productColorName);
     }
 
     Page<Product> page = productRepository.findAll(builder.build(),

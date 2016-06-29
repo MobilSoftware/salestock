@@ -85,17 +85,23 @@ angular.module('talarionApp')
 
             var nameSearchCrit = '';
             var categoryNameSearchCrit = '';
+            var productSizeNameSearchCrit = '';
+            var productColorNameSearchCrit = '';
 
             if (tableState.search.predicateObject != undefined) {
                 nameSearchCrit = tableState.search.predicateObject.name || '';
                 categoryNameSearchCrit = tableState.search.predicateObject.categoryName || '';
+                productSizeNameSearchCrit = tableState.search.predicateObject.productSizeName || '';
+                productColorNameSearchCrit = tableState.search.predicateObject.productColorName || '';
             }
 
             Product.query({
                 page: page,
                 size: 10,
                 name: nameSearchCrit,
-                categoryName: categoryNameSearchCrit
+                categoryName: categoryNameSearchCrit,
+                productSizeName: productSizeNameSearchCrit,
+                productColorName: productColorNameSearchCrit
             }, function(result, headers) {
                 $scope.links = ParseLinks.parse(headers('link'));
                 $scope.productList = result;
