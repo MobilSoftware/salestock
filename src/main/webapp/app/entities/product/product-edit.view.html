@@ -128,14 +128,14 @@
                         <div class="form-group" ng-class="{ 'has-error': submitted && editForm.category-name.$invalid }">
                             <label class="col-sm-3 control-label" for="categoryName">Category</label>
                             <div class="col-sm-7">
-                                <angucomplete-alt description-field="name" id="categoryName" input-class="form-control form-control-small" name="categoryName" pause="400" placeholder="Type Category Name Here ..." remote-url="/api/category?name=" selected-object="selectCategoryAc" title-field="name" initial-value="product.category.name" selectOnClick/>
+                                <angucomplete-alt description-field="name" id="categoryName" input-class="form-control form-control-small" name="categoryName" pause="400" placeholder="Type Category Name Here ..." remote-url="/api/category?name=" selected-object="selectCategoryAc" title-field="name" initial-value="product.category.name" selectOnClick minlength="1"/>
                                 <input class="form-control" id="categoryName" name="categoryName" ng-model="product.category.name" readonly required type="text">
                                 <div ng-if="submitted" ng-messages="editForm.categoryName.$error">
                                     <div ng-messages-include="scripts2/components/messages/global-messages.html"></div>
                                 </div>
                             </div>
                             <div class="col-sm-2">
-                                <button type="button" ng-click="clearInput(categoryName)" class="btn btn-circle btn-default btn-stroke">
+                                <button type="button" ng-click="clearInput('categoryName')" class="btn btn-circle btn-default btn-stroke">
                                     <i class="fa fa-eraser"></i>
                                 </button>
                                 <!-- <button class="btn btn-circle btn-default btn-stroke" id="lookupButton" ng-click="showLookup()" type="button">
@@ -153,7 +153,25 @@
                                 </div>
                             </div>
                             <div class="col-sm-2">
-                                <button type="button" ng-click="clearInput(productSizeName)" class="btn btn-circle btn-default btn-stroke">
+                                <button type="button" ng-click="clearInput('productSizeName')" class="btn btn-circle btn-default btn-stroke">
+                                    <i class="fa fa-eraser"></i>
+                                </button>
+                                <!-- <button class="btn btn-circle btn-default btn-stroke" id="lookupButton" ng-click="showLookup()" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button> -->
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': submitted && editForm.productColorName.$invalid }">
+                            <label class="col-sm-3 control-label" for="productColorName">Color</label>
+                            <div class="col-sm-7">
+                                <angucomplete-alt description-field="name" id="productColorName" input-class="form-control form-control-small" name="productColorName" pause="400" placeholder="Type Product Color Here ..." remote-url="/api/productColor?name=" selected-object="selectProductColorAc" title-field="name" initial-value="product.productColor.name" selectOnClick minlength="1"/>
+                                <input class="form-control" id="productColorName" name="productColorName" ng-model="product.productColor.name" readonly required type="text">
+                                <div ng-if="submitted" ng-messages="editForm.productColorName.$error">
+                                    <div ng-messages-include="scripts2/components/messages/global-messages.html"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="button" ng-click="clearInput('productColorName')" class="btn btn-circle btn-default btn-stroke">
                                     <i class="fa fa-eraser"></i>
                                 </button>
                                 <!-- <button class="btn btn-circle btn-default btn-stroke" id="lookupButton" ng-click="showLookup()" type="button">

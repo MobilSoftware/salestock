@@ -13,6 +13,7 @@ angular.module('talarionApp').controller('ProductEditController',
         $scope.product = {};
         $scope.product.category = {};
         $scope.product.productSize = {};
+        $scope.product.productColor = {};
 
         $scope.load = function(id) {
             Product.get({
@@ -108,7 +109,18 @@ angular.module('talarionApp').controller('ProductEditController',
 
         }
 
+        $scope.selectProductColorAc = function(selected) {
+
+            if (selected != undefined) {
+                // console.log(JSON.stringify(selected));
+
+                $scope.product.productColor = selected.originalObject;
+            }
+
+        }
+
         $scope.clearInput = function(id) {
+          console.log(JSON.stringify(id));
             if (id) {
                 $scope.$broadcast('angucomplete-alt:clearInput', id);
             } else {

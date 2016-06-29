@@ -16,6 +16,7 @@ angular.module('talarionApp').controller('ProductCreateController',
         $scope.product.sellPrice = 0;
         $scope.product.category = {};
         $scope.product.productSize = {};
+        $scope.product.productColor = {};
 
         $scope.create = function() {
 
@@ -94,9 +95,17 @@ angular.module('talarionApp').controller('ProductCreateController',
 
         $scope.selectProductSizeAc = function(selected) {
 
-            console.log(JSON.stringify(selected));
+            // console.log(JSON.stringify(selected));
 
             $scope.product.productSize = selected.originalObject;
+
+        }
+
+        $scope.selectProductColorAc = function(selected) {
+
+            // console.log(JSON.stringify(selected));
+
+            $scope.product.productColor = selected.originalObject;
 
         }
 
