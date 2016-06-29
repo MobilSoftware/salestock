@@ -98,6 +98,14 @@ It is important also to add Custom Header for HTTP Request related with the test
 
 ![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search3-output.png)
 
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search4.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search4-output.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search5.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search5-output.png)
+
 - Product Create
 
 ![](https://raw.githubusercontent.com/irfanr/salestock/master/product-create.png)
