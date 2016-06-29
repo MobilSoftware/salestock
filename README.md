@@ -3,6 +3,13 @@
 This application was built for assessment purpose with case study as follows:
 Product and Category management with hierarchical tree data for Category, enable filter based on product size, color and price range
 
+## Entity Relationship Diagram
+
+This ERD Diagram described what database structure that translated from requirements above:
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/erd.png)
+*ERD*
+
 ## Operation Guide
 
 Cloud infrastructure is provided with address as follows:
