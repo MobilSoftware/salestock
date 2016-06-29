@@ -81,7 +81,45 @@ It is important also to add Custom Header for HTTP Request related with the test
 ### Product
 
 - Product Listing and Search
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-list.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-list-output.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search-output.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search2.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search2-output.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search3.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-search3-output.png)
+
 - Product Create
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-create.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-create-output.png)
+
+- Product Detail
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-detail.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-detail-output.png)
+
 - Product Update
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-update.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-update-output.png)
+
 - Product Delete
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-delete.png)
+
+![](https://raw.githubusercontent.com/irfanr/salestock/master/product-delete-output.png)
+
 
