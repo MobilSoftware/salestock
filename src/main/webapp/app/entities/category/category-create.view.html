@@ -41,7 +41,7 @@
                             <div class="form-group" ng-class="{ 'has-error': submitted && createForm.parentName.$invalid }">
                                 <label class="col-sm-3 control-label" for="categoryName">Category</label>
                                 <div class="col-sm-7">
-                                    <angucomplete-alt description-field="name" id="categoryName" name="categoryName" input-class="form-control form-control-small" pause="400" placeholder="Type Parent Category Name Here ..." remote-url="http://localhost:8080/api/category?name=" selected-object="selectCategoryAc" title-field="name"/>
+                                    <angucomplete-alt description-field="name" id="categoryName" name="categoryName" input-class="form-control form-control-small" pause="400" placeholder="Type Parent Category Name Here ..." remote-url="/api/category?name=" selected-object="selectCategoryAc" title-field="name" min-length="1"/>
                                     <input class="form-control" id="parentName" name="parentName" ng-model="category.parent.name" readonly required type="text">
                                     <div ng-if="submitted" ng-messages="createForm.parentName.$error">
                                         <div ng-messages-include="scripts2/components/messages/global-messages.html"></div>
